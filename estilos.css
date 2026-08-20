@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda);
+
+body {
+  font-family: 'Serif';
+  font-family: "Ruda", sans-serif;
+  min-width: 1200px;
+}
+
+@media screen and (max-aspect-ratio: 0.8) and (max-width: 1200px) {
+  body { color: blue; min-width: 2400px; }
+  cgcc-grade-container { grid-template-columns: repeat(9, 200px); }
+  cgcc-grade-disc { text-overflow: ellipsis; }
+}
+
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid black; padding: 0.5em; text-align: left; vertical-align: top; font-size: 80%; }
+col:nth-child(1) { width: 6em; white-space: nowrap; }
+col:nth-child(2) { width: 2em; }
+col:nth-child(3) { width: 60em; }
+col:nth-child(4) { width: auto; }
+#problemas { color: red; font-size: 75%; }
+.rodape { display: grid; grid-template-columns: 1fr 1fr; justify-items: center; align-items: center; color: #d0a0a0; font-size: 75%; padding: 0.5em 0; }
+#somas { justify-self: start; }
+#buttons { justify-self: end; }
+#loading-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(255, 255, 255, 0.6); display: none; align-items: center; justify-content: center; cursor: wait; z-index: 9999; }
+#help-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); color: white; display: none; align-items: center; justify-content: center; z-index: 1000; overflow: auto; }
+#help-overlay.visible { display: flex; }
+#help-overlay div { min-width: 600px; max-width: min(720px, 80%); max-height: 80%; overflow-y: auto; background-color: lightslategray; color: lightgoldenrodyellow; padding: 20px 40px; border-radius: 10px; }
+#help-overlay li + li { margin-top: 10px; }
+.bold { color: gold; font-size: 110%; font-weight: 800; text-shadow: 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000; }
+blockquote { margin-left: 0; padding-left: 20px; border-left: 8px solid gold; }
+blockquote p { font: gray; }
+code { background: #707070; padding: 2px 4px; border-radius: 4px; font-weight: 800; }
+.def { color: #FFCC00; font-weight: 800; }
+h3 { color: #FFDD44; }
+#plano-vazio { text-align: center; font-weight: bold; color: black; background-color: #ffaaaa; }
+.disabled { pointer-events: none; opacity: 0.6; }
+#logout-button { position: absolute; top: 10px; right: 10px; background-color: red; color: white; padding: 8px 16px; border: none; cursor: pointer; border-radius: 5px; }
+#save-plano { font-family: "Ruda", sans-serif; bottom: 10px; right: 10px; background-color: #28a745; color: white; padding: 8px 16px; border: none; cursor: pointer; border-radius: 5px; }
+#save-plano:disabled { background-color: #b1b1b1; color: #ffffff; cursor: not-allowed; opacity: 0.6; box-shadow: none; }
+select { width: 100%; padding: 2px; border: none; border-radius: 4px; background-color: #f5f5f5; outline: none; }
+.turma-cell .turma-select { min-width: 8em; background-color: transparent; opacity: 0.7; }
+#plano-discs tr.PLANEJADA { background: var(--cor-PLANEJADA); }
+#plano-discs tr.APROVADO { background: var(--cor-APROVADO); }
+#plano-discs thead td { font-weight: bold; font-size: 90%; }
+#migrou { color: red; border: 1px solid red; padding: 1em; background-color: #FFCC66; margin-bottom: 2em; }
+tabs-container { display: flex; column-gap: 3px; padding: 0 1em 1em 1em; }
+tab-button { appearance: none; background: none; background-color: #ddd; margin: 0; font: inherit; color: inherit; text-align: inherit; display: inline-block; padding: 10px 20px; cursor: pointer; border: none; }
+.active-tab { background-color: #fff; border-bottom: 2px solid blue; }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intranet Computação UFCG</title>
+  <style>
+    #immediate-loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #555;
+      z-index: 10000;
+    }
+    #immediate-loading.hidden { display: none; }
+  </style>
+  <script type="module" src="app-local.js"></script>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div id="immediate-loading">Carregando...</div>
+  <h1>
+    <span id="matricula"></span>
+    <span id="nome"></span>
+  </h1>
+  <div id="logout-button">Logout</div>
+  <main></main>
+  <div id="loading-overlay"></div>
+  <template id="help-template">
+    <div id="help-overlay">
+      <div>
+      <h1>Como fazer sua pré-matrícula?</h1>
+      <blockquote>
+        <p><span class="bold">TL;DR</span> Escolha o período em andamento. Em
+        seguida, clique nas disciplinas em curso, registrando o resultado
+        esperado para cada uma delas para este período.</p>
+      </blockquote>
+      <h3>Como saio deste help?</h3>
+      <p>Tecle <code>h</code> para ligar/desligar este <em>help</em>.</p>
+      <h3>Status das disciplinas</h3>
+      <ol>
+        <li><span class="def">Concluída</span> cinza</li>
+        <li><span class="def">Em Curso</span> amarelo</li>
+        <li><span class="def">Planejada</span> azul</li>
+        <li><span class="def">Pendente</span> branco</li>
+      </ol>
+      </div>
+    </div>
+  </template>
+  <template id="obrigado-template">
+    <div id="help-overlay">
+      <div>
+        <h1>Obrigado!</h1>
+        <p>Lembre que você DEVE fazer ajustes na sua pré-matrícula sempre que precisar.</p>
+      </div>
+    </div>
+  </template>
+</body>
+</html>
